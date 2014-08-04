@@ -10,7 +10,7 @@ The base rules for bootstrap grid from either the default build or the bootstrap
 
 The sass mixins allow you to choose how much to output, for example if you only want a container-table from breakpoint md and up you can `@include container-md-table`.
 
-If you just want to drop all the rules into the default bootstrap.css use the file: `example/bootstrap-container-table.css`
+If you just want to drop all the rules into the default bootstrap.css use the file: `bootstrap-container-table.css`
 
 The container element requires the base `container` class in addition to the `container-table` class. Rows and Columns only require standard bootstrap classes.
 
