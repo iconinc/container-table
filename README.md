@@ -50,3 +50,4 @@ These mixins will include @media wrappers for the bootstrap breakpoints.
 The example doesn't use bootstraps Sass files but does contain the bootstrap default. The output css is compatible with vanilla bootstrap v3.
 
 Dropping the `_container-table.scss` after importing other bootstrap Sass library variable file and the grid will cause it to pickup any changes to grid column amount or breakpoint sizes you may have defined. 
+
