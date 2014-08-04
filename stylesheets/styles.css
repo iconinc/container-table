@@ -1,5 +1,7 @@
+@import url("http:////maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css");
 /**
- * All default bootstrap breakpoint tiers
+ * Container tables
+ * for all default bootstrap breakpoint tiers
  */
 .vertical-middle {
   vertical-align: middle; }

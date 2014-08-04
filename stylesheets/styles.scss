@@ -1,0 +1,11 @@
+@import url("http:////maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css");
+@import "container-table/container-table";
+
+/**
+ * Container tables
+ * for all default bootstrap breakpoint tiers
+ */
+@include container-xs-table;
+@include container-sm-table;
+@include container-md-table;
+@include container-lg-table;
