@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Container-table : Make a bootstrap grid container behave as a table">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Container-table</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/rhysburnie/container-table">View on GitHub</a>
+
+          <h1 id="project_title">Container-table</h1>
+          <h2 id="project_tagline">Make a bootstrap grid container behave as a table</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/rhysburnie/container-table/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/rhysburnie/container-table/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="bootstrap-container-as-a-css-display-table" class="anchor" href="#bootstrap-container-as-a-css-display-table"><span class="octicon octicon-link"></span></a>Bootstrap container as a (css display) table</h1>
+
+<p>Makes bootstraps grid markup behave as table layout.</p>
+
+<p>Uses bootstrap's breakpoint column classes. For example a column within a <code>.container-table</code> with <code>.col-sm-6</code> with only act as a table cell from small breakpoint and above.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>The base rules for bootstrap grid from either the default build or the bootstrap Sass library.</p>
+
+<p>The Sass mixins allow you to choose how much to output, for example if you only want a <code>container-table</code> from breakpoint md and up you can <code>@include container-md-table</code>.</p>
+
+<p>If you just want to drop all the rules into the default <code>bootstrap.css</code> use the file: <code>bootstrap-container-table.css</code></p>
+
+<p>The container element requires the base <code>container</code> class in addition to the <code>container-table</code> class. Rows and Columns only require standard bootstrap classes.</p>
+
+<p>Example:</p>
+
+<pre><code>&lt;div class="container container-table"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-sm-6 vertical-middle"&gt;
+
+        &lt;/div&gt;
+        &lt;div class="col-sm-6 vertical-middle"&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;    
+&lt;/div&gt;
+</code></pre>
+
+<h2>
+<a name="available-mixins" class="anchor" href="#available-mixins"><span class="octicon octicon-link"></span></a>Available mixins</h2>
+
+<p>These mixins will include <a href="https://github.com/media" class="user-mention">@media</a> wrappers for the bootstrap breakpoints.</p>
+
+<ul>
+<li><code>@include container-lg-table</code></li>
+<li><code>@include container-md-table</code></li>
+<li><code>@include container-sm-table</code></li>
+<li><code>@include container-xs-table</code></li>
+</ul><h2>
+<a name="caveats" class="anchor" href="#caveats"><span class="octicon octicon-link"></span></a>Caveats</h2>
+
+<ul>
+<li>Obviously only compatible with browsers that support <code>display: table</code> <code>display: table-row</code> and <code>display: table-cell</code>.</li>
+<li>Is written to only affect direct decendants ie. <code>.container-table &gt; .row &gt; .col-sm-6</code> etc.</li>
+<li>An image in a cell that is larger than the cells width as set by column class will force the cell larger to the images native size even when it has <code>max-width: 100%</code> in Firefox and IE, Chrome keeps the image contained in the cells width. The only way I've found to fix this setting the img to <code>width:100%</code> which is fine for images &gt;= the cell width but would obviously be undesirable to tiny images.</li>
+</ul><h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>The example doesn't use bootstraps Sass files but does contain the bootstrap default. The output css is compatible with vanilla bootstrap v3.</p>
+
+<p>Dropping the <code>_container-table.scss</code> after importing other bootstrap Sass library variable file and the grid will cause it to pickup any changes to grid column amount or breakpoint sizes you may have defined. </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Container-table maintained by <a href="https://github.com/rhysburnie">rhysburnie</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
