@@ -1,0 +1,8 @@
+@import "../container-table";
+/**
+ * All default bootstrap breakpoint tiers
+ */
+@include container-xs-table;
+@include container-sm-table;
+@include container-md-table;
+@include container-lg-table;

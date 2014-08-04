@@ -3,24 +3,7 @@
 $screen-sm-min: 768px !default;
 $screen-md-min: 992px !default;
 $screen-lg-min: 1200px !default;
-
-.vertical-middle {
-  vertical-align: middle;
-}
-.vertical-top {
-  vertical-align: top;
-}
-.vertical-bottom {
-  vertical-align: bottom;
-}
-
-@mixin container-table-all-sizes()
-{
-  @include container-xs-table;
-  @include container-sm-table;
-  @include container-md-table;
-  @include container-lg-table;
-}
+$grid-columns:  12 !default;
 
 @mixin container-xs-table
 {
@@ -48,22 +31,48 @@ $screen-lg-min: 1200px !default;
   }
 }
 
+// internal mixins
+//
 @mixin container-table($tier) {
-  $list: '';
+  @include container-table-base-rules;
+
   $i: 1;
   $list: ".col-#{$tier}-#{$i}";
-  @for $i from (1 + 1) through $grid-columns {
+  @for $i from 2 through $grid-columns {
     $list: "#{$list}, .col-#{$tier}-#{$i}";
   }
 
-  .container-#{$tier}-table {
-    display:table;
-    > .row {
-      display: table-row;
-      #{$list} {
-        display: table-cell;
-        float: none;
+  .container-table > .row > {
+    #{$list} {
+      display: table-cell;
+      float: none;
+    }
+  }
+}
+
+// only output base rules once
+// 
+$CONTAINERTABLEBASEWRITTEN: false;
+@mixin container-table-base-rules
+{
+  @if not $CONTAINERTABLEBASEWRITTEN {
+    .vertical-middle {
+      vertical-align: middle;
+    }
+    .vertical-top {
+      vertical-align: top;
+    }
+    .vertical-bottom {
+      vertical-align: bottom;
+    }
+
+    .container-table {
+      display:table;
+      > .row {
+        display: table-row;
       }
     }
+    
+    $CONTAINERTABLEBASEWRITTEN: true;
   }
 }

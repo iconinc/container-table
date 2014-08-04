@@ -1,0 +1,33 @@
+/**
+ * All default bootstrap breakpoint tiers
+ */
+.vertical-middle {
+  vertical-align: middle; }
+
+.vertical-top {
+  vertical-align: top; }
+
+.vertical-bottom {
+  vertical-align: bottom; }
+
+.container-table {
+  display: table; }
+  .container-table > .row {
+    display: table-row; }
+
+.container-table > .row > .col-xs-1, .container-table > .row > .col-xs-2, .container-table > .row > .col-xs-3, .container-table > .row > .col-xs-4, .container-table > .row > .col-xs-5, .container-table > .row > .col-xs-6, .container-table > .row > .col-xs-7, .container-table > .row > .col-xs-8, .container-table > .row > .col-xs-9, .container-table > .row > .col-xs-10, .container-table > .row > .col-xs-11, .container-table > .row > .col-xs-12 {
+  display: table-cell;
+  float: none; }
+
+@media (min-width: 768px) {
+  .container-table > .row > .col-sm-1, .container-table > .row > .col-sm-2, .container-table > .row > .col-sm-3, .container-table > .row > .col-sm-4, .container-table > .row > .col-sm-5, .container-table > .row > .col-sm-6, .container-table > .row > .col-sm-7, .container-table > .row > .col-sm-8, .container-table > .row > .col-sm-9, .container-table > .row > .col-sm-10, .container-table > .row > .col-sm-11, .container-table > .row > .col-sm-12 {
+    display: table-cell;
+    float: none; } }
+@media (min-width: 992px) {
+  .container-table > .row > .col-md-1, .container-table > .row > .col-md-2, .container-table > .row > .col-md-3, .container-table > .row > .col-md-4, .container-table > .row > .col-md-5, .container-table > .row > .col-md-6, .container-table > .row > .col-md-7, .container-table > .row > .col-md-8, .container-table > .row > .col-md-9, .container-table > .row > .col-md-10, .container-table > .row > .col-md-11, .container-table > .row > .col-md-12 {
+    display: table-cell;
+    float: none; } }
+@media (min-width: 1200px) {
+  .container-table > .row > .col-lg-1, .container-table > .row > .col-lg-2, .container-table > .row > .col-lg-3, .container-table > .row > .col-lg-4, .container-table > .row > .col-lg-5, .container-table > .row > .col-lg-6, .container-table > .row > .col-lg-7, .container-table > .row > .col-lg-8, .container-table > .row > .col-lg-9, .container-table > .row > .col-lg-10, .container-table > .row > .col-lg-11, .container-table > .row > .col-lg-12 {
+    display: table-cell;
+    float: none; } }
