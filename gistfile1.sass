@@ -1,0 +1,69 @@
+// you should normally have bootstraps sass variables loaded first
+// but just incase these are the defaults
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
+
+.vertical-middle {
+  vertical-align: middle;
+}
+.vertical-top {
+  vertical-align: top;
+}
+.vertical-bottom {
+  vertical-align: bottom;
+}
+
+@mixin container-table-all-sizes()
+{
+  @include container-xs-table;
+  @include container-sm-table;
+  @include container-md-table;
+  @include container-lg-table;
+}
+
+@mixin container-xs-table
+{
+  @include container-table(xs);
+}
+
+@mixin container-sm-table
+{
+  @media (min-width: $screen-sm-min) {
+    @include container-table(sm);
+  }
+}
+
+@mixin container-md-table
+{
+  @media (min-width: $screen-md-min) {
+    @include container-table(md);
+  }
+}
+
+@mixin container-lg-table
+{
+  @media (min-width: $screen-lg-min) {
+    @include container-table(lg);
+  }
+}
+
+@mixin container-table($tier) {
+  $list: '';
+  $i: 1;
+  $list: ".col-#{$tier}-#{$i}";
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-#{$tier}-#{$i}";
+  }
+
+  .container-#{$tier}-table {
+    display:table;
+    > .row {
+      display: table-row;
+      #{$list} {
+        display: table-cell;
+        float: none;
+      }
+    }
+  }
+}
