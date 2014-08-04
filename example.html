@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Container-table : Make a bootstrap grid container behave as a table">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/styles.css">
+    <style type="text/css">
+    [class*=col-] {
+        outline: 1px solid #ccc;
+    }
+    </style>
+    <title>Container-table</title>
+  </head>
+
+  <body>
+
+  <div class="container">
+      <h1>Example - content-table</h1>
+
+      <p>At the moment this is the only use case I've had for this.</p>
+
+      <p>Nested grid are untested but theoretically they should behave the same content-table only targets direct row and columns.</p>
+
+      <p>If the above is not your use case you may get expected results.</p>
+  </div>
+
+  <h2 class="container">Normal bootstrap grid row</h2>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">.col-md-4</div>
+          <div class="col-md-5">.col-md-5</div>
+          <div class="col-md-3">.col-md-3</div>
+      </div>
+  </div>
+
+  <h2 class="container">bootstrap grid row as a table via css</h2>
+
+  <div class="container container-table">
+      <div class="row">
+          <div class="col-md-4 vertical-middle">.col-md-4</div>
+          <div class="col-md-5 vertical-middle">
+            .col-md-5
+            <br><br>
+            this extra text should cause any smaller cell to be `vertical-align: middle`
+          </div>
+          <div class="col-md-3 vertical-middle">.col-md-3</div>
+      </div>
+      <div class="row">
+          <div class="col-md-4 vertical-top">.col-md-4 - `vertical-align: top`</div>
+          <div class="col-md-5 vertical-middle">
+            .col-md-5
+            <br><br>
+            this extra text should cause any smaller cell to be `vertical-align: middle`
+          </div>
+          <div class="col-md-3 vertical-bottom">.col-md-3 `vertical-align: bottom`</div>
+      </div>
+  </div>
+
+  </body>
+</html>

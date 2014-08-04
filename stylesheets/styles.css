@@ -13,7 +13,9 @@
   vertical-align: bottom; }
 
 .container-table {
-  display: table; }
+  display: table;
+  padding-left: 0;
+  padding-right: 0; }
   .container-table > .row {
     display: table-row; }
 
