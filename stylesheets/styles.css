@@ -3,23 +3,23 @@
  * Container tables
  * for all default bootstrap breakpoint tiers
  */
+.vertical-middle {
+  vertical-align: middle; }
+
+.vertical-top {
+  vertical-align: top; }
+
+.vertical-bottom {
+  vertical-align: bottom; }
+
+.container-table {
+  display: table;
+  padding-left: 0;
+  padding-right: 0; }
+  .container-table > .row {
+    display: table-row; }
+
 @media (min-width: 1200px) {
-  .vertical-middle {
-    vertical-align: middle; }
-
-  .vertical-top {
-    vertical-align: top; }
-
-  .vertical-bottom {
-    vertical-align: bottom; }
-
-  .container-table {
-    display: table;
-    padding-left: 0;
-    padding-right: 0; }
-    .container-table > .row {
-      display: table-row; }
-
   .container-table > .row > .col-lg-1, .container-table > .row > .col-lg-2, .container-table > .row > .col-lg-3, .container-table > .row > .col-lg-4, .container-table > .row > .col-lg-5, .container-table > .row > .col-lg-6, .container-table > .row > .col-lg-7, .container-table > .row > .col-lg-8, .container-table > .row > .col-lg-9, .container-table > .row > .col-lg-10, .container-table > .row > .col-lg-11, .container-table > .row > .col-lg-12 {
     display: table-cell;
     float: none; } }

@@ -43,7 +43,7 @@ These mixins will include @media wrappers for the bootstrap breakpoints.
 * Obviously only compatible with browsers that support `display: table` `display: table-row` and `display: table-cell`.
 * Is written to only affect direct decendants ie. `.container-table > .row > .col-sm-6` etc.
 * An image in a cell that is larger than the cells width as set by column class will force the cell larger to the images native size even when it has `max-width: 100%` in Firefox and IE, Chrome keeps the image contained in the cells width. The only way I've found to fix this setting the img to `width:100%` which is fine for images >= the cell width but would obviously be undesirable to tiny images.
-
+* Usually the left/right padding of the table needs to be set to zero so this is done via the class, but depending on other styling needs you may need to re-declair the padding for .container-table - I've had to do this in a custom use case.
 
 ## Example
 

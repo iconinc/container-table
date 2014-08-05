@@ -7,39 +7,42 @@ $grid-columns:  12 !default;
 
 @mixin container-xs-table
 {
+  @include once-container-table-base-rules;
   @media (max-width: $screen-sm-min - 1) {
     .container-table {
       width: 100%;
     }
   }
-  @include container-table(xs);
+  @include container-table-cells(xs);
 }
 
 @mixin container-sm-table
 {
+  @include once-container-table-base-rules;
   @media (min-width: $screen-sm-min) {
-    @include container-table(sm);
+    @include container-table-cells(sm);
   }
 }
 
 @mixin container-md-table
 {
+  @include once-container-table-base-rules;
   @media (min-width: $screen-md-min) {
-    @include container-table(md);
+    @include container-table-cells(md);
   }
 }
 
 @mixin container-lg-table
 {
+  @include once-container-table-base-rules;
   @media (min-width: $screen-lg-min) {
-    @include container-table(lg);
+    @include container-table-cells(lg);
   }
 }
 
 // internal mixins
 //
-@mixin container-table($tier) {
-  @include container-table-base-rules;
+@mixin container-table-cells($tier) {
 
   $i: 1;
   $list: ".col-#{$tier}-#{$i}";
@@ -58,7 +61,7 @@ $grid-columns:  12 !default;
 // only output base rules once
 // 
 $CONTAINERTABLEBASEWRITTEN: false;
-@mixin container-table-base-rules
+@mixin once-container-table-base-rules
 {
   @if not $CONTAINERTABLEBASEWRITTEN {
     .vertical-middle {

@@ -32,9 +32,9 @@
 
   <div class="container">
       <div class="row">
-          <div class="col-md-4">.col-md-4</div>
-          <div class="col-md-5">.col-md-5</div>
-          <div class="col-md-3">.col-md-3</div>
+          <div class="col-sm-2 col-md-4 col-lg-4">.col-sm-2 .col-md-4 .col-lg-4</div>
+          <div class="col-sm-8 col-md-5 col-lg-4">.col-sm-8 .col-md-5 .col-lg-4</div>
+          <div class="col-sm-2 col-md-3 col-lg-4">.col-sm-2 .col-md-3 .col-lg-4</div>
       </div>
   </div>
 
@@ -42,22 +42,24 @@
 
   <div class="container container-table">
       <div class="row">
-          <div class="col-md-4 vertical-middle">.col-md-4</div>
-          <div class="col-md-5 vertical-middle">
-            .col-md-5
+          <div class="col-sm-2 col-md-4 col-lg-4 vertical-middle">.col-sm-2 c.ol-md-4 .col-lg-4</div>
+          <div class="col-sm-8 col-md-5 col-lg-4 vertical-middle">
+            .col-sm-8 .col-md-5 .col-lg-4
             <br><br>
             this extra text should cause any smaller cell to follow its vertical-align property as per a table cell.
           </div>
-          <div class="col-md-3 vertical-middle">.col-md-3</div>
+          <div class="col-sm-2 col-md-3 col-lg-4 vertical-middle">.col-sm-2 .col-md-3 .col-lg-4</div>
       </div>
       <div class="row">
-          <div class="col-md-4 vertical-top">.col-md-4 - `vertical-align: top`</div>
-          <div class="col-md-5 vertical-middle">
-            .col-md-5
-            <br><br>
-            this extra text should cause any smaller cell to follow its vertical-align property as per a table cell.
+          <div class="col-sm-2 col-md-4 col-lg-4 vertical-top">`vertical-align: top`</div>
+          <div class="col-sm-8 col-md-5 col-lg-4 vertical-middle">
+            
+            this extra text should cause any smaller cell 
+            <br>to follow its vertical-align property 
+            <br>as per a table cell.
+           
           </div>
-          <div class="col-md-3 vertical-bottom">.col-md-3 `vertical-align: bottom`</div>
+          <div class="col-sm-2 col-md-3 col-lg-4 vertical-bottom">`vertical-align: bottom`</div>
       </div>
   </div>
 
